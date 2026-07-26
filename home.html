@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<style>
+    /* Komplett rein schwarzer Hintergrund */
+    html, body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        background: #000000;
+        color: #ffffff; /* Weißer Text */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        position: relative;
+    }
+
+    /* Textbereich oben links im Schreibmaschinenstil */
+    .typewriter-container {
+        position: absolute;
+        top: 60px;        /* Viel mehr Abstand nach oben (vorher 20px) */
+        left: 45px;       /* Etwas mehr Abstand nach links (vorher 20px) */
+        font-family: 'Courier New', Courier, monospace; 
+        font-size: 1.1rem;
+        line-height: 1.8; /* Größerer Abstand zwischen den Zeilen (vorher 1.4) */
+        z-index: 10;
+    }
+
+    /* Video-Container mit ca. 4 cm Abstand auf Laptops */
+    .video-container {
+        width: calc(100% - 8cm);   
+        height: calc(100% - 8cm); 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    /* Video-Element */
+    video {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    /* Mobil-Optimierung für Handys im Hochformat */
+    @media (max-width: 900px) {
+        .typewriter-container {
+            font-size: 0.9rem;
+            top: 30px;  /* Angepasster Abstand für Mobilgeräte */
+            left: 25px;
+            line-height: 1.6;
+        }
+        .video-container {
+            width: 95vw;
+            height: 55vh;
+            margin-top: 80px; 
+        }
+    }
+
+    /* Volles Bild auf Handys im Querformat (Text blendet sich aus) */
+    @media (max-width: 900px) and (orientation: landscape) {
+        .typewriter-container {
+            display: none; 
+        }
+        .video-container {
+            width: 100vw;
+            height: 100vh;
+            margin-top: 0;
+        }
+    }
+</style>
+
+<!-- Textbereich oben links (Typewriter-Stil mit 2 Zeilen) -->
+<div class="typewriter-container">
+    loch arthur 2026.<br>
+    thank you!<br>
+    <br><br><br>
+    falling in love <br>
+    with this place <br>
+    is so easy <br> <br>
+    heart over head! <br> <br>
+
+    much love. <br>
+    lilo
+    
+    
+</div>
+
+<!-- Video-Player -->
+<div class="video-container">
+    <video controls>
+        <source src="bird.mov" type="video/quicktime">
+        Ihr Browser unterstützt das Video-Tag nicht.
+    </video>
+</div>
+
+<div class="paragraph">
+    <!-- Leer -->
+</div>
+
+</body>
+</html>
